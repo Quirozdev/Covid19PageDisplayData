@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datos sobre el COVID-19</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./resources/img/covid.png" alt="Icono Covid" />
+      <h1>COVID-19</h1>
+    </header>
+    <main>
+      <form>
+        <select id="selector-estado">
+          <option selected disabled>Selecciona un estado</option>
+        </select>
+      </form>
+      <div class="cargando oculto"></div>
+      <p class="mensaje-error oculto"></p>
+      <section id="datos" class="oculto">
+        <h2>Datos de COVID-19 para <span id="nombre-estado"></span></h2>
+        <article class="contenedor-cards">
+          <div class="card">
+            <img src="./resources/img/enfermo-icono.png" alt="Icono enfermos" />
+            <div>
+              <p class="card-title">Casos confirmados</p>
+              <p class="card-text" id="casos-confirmados"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./resources/img/probabilidad-icono.png"
+              alt="Icono probabilidad"
+            />
+            <div>
+              <p class="card-title">Casos probables</p>
+              <p class="card-text" id="casos-probables"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./resources/img/hospital-icono.png"
+              alt="Icono hospital"
+            />
+            <div>
+              <p class="card-title">Hospitalizaciones</p>
+              <p class="card-text" id="hospitalizaciones"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./resources/img/recuperacion-icono.png"
+              alt="Icono recuperacion"
+            />
+            <div>
+              <p class="card-title">Recuperaciones</p>
+              <p class="card-text" id="recuperaciones"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./resources/img/muerte-icono.png" alt="Icono muertes" />
+            <div>
+              <p class="card-title">Muertes</p>
+              <p class="card-text" id="muertes"></p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Creado por Luis Daniel Quiroz Osuna. 2024</p>
+    </footer>
+  </body>
+</html>

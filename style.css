@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #455d7a;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+header,
+footer {
+  background-color: #233142;
+  color: #e3e3e3;
+  padding: 1rem;
+}
+
+header img {
+  max-width: 75px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem 0rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#selector-estado {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #233142;
+  color: #e3e3e3;
+  font-size: 1rem;
+}
+
+option:checked {
+  font-weight: 600;
+}
+
+#datos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#datos.oculto,
+.cargando.oculto,
+.mensaje-error.oculto {
+  display: none;
+}
+
+#datos h2 {
+  color: #e3e3e3;
+  text-align: center;
+}
+
+#nombre-estado {
+  text-decoration: underline;
+}
+
+.contenedor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: red;
+  border-radius: 8px;
+  display: flex;
+  padding: 1rem 0.75rem;
+  min-width: 300px;
+  max-width: 500px;
+  gap: 0.5rem;
+  background-color: #233142;
+}
+
+.card img {
+  width: 64px;
+  height: 64px;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #e3e3e3;
+}
+
+.card-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#casos-confirmados {
+  color: #fcff82;
+}
+
+#casos-probables {
+  color: #07a4b5;
+}
+
+#hospitalizaciones {
+  color: #ff9c6d;
+}
+
+#recuperaciones {
+  color: #8ded8e;
+}
+
+#muertes {
+  color: #fd5959;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.cargando {
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 100px;
+  height: 100px;
+  border-top: 6px solid #233142;
+  border-radius: 50%;
+  animation: cargando 1.5s infinite linear;
+}
+
+.mensaje-error {
+  background-color: #fd5959;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+@keyframes cargando {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
